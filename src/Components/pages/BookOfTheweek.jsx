@@ -2,7 +2,7 @@ import React from "react";
 
 const BookOfTheweek = () => {
   return (
-    <div>
+    <div className="mb-25">
       <h1 className="text-center text-3xl">Book of the Week_</h1>
       <div className="hero  w-[80%]  mx-auto mt-13">
         <div className="hero-content flex-col  lg:flex-row-reverse w-[100%]">
