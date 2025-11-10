@@ -12,8 +12,8 @@ import MyBook from "./Components/MyBook/MyBook";
 import Login from "./Components/LoginRegister/Login";
 import Register from "./Components/LoginRegister/Register";
 import AuthProvider from "./Context/AuthProvider";
-import BookDetails from "./Components/pages/BookDetails";
 import axios from "axios";
+import BookDetails from "./Components/pages/BookDetails";
 
 const router = createBrowserRouter([
   {
@@ -29,12 +29,8 @@ const router = createBrowserRouter([
         Component: AllBooks,
       },
       {
-        path: "allBooks",
-        Component: AllBooks,
-      },
-      {
-        path: "bookDetails/:id",
-        Component: BookDetails,
+        path: "addBook",
+        Component: Addbook,
       },
       {
         path: "myBooks",
@@ -48,6 +44,11 @@ const router = createBrowserRouter([
         path: "register",
         Component: Register,
       },
+      {
+        path:'bookDetails/:id',
+        loader:({params})=>axios.get(`http://localhost:3000/book-details/${params.id}`),
+        Component: BookDetails
+      }
     ],
   },
 ]);

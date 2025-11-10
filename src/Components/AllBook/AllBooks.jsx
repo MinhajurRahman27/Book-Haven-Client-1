@@ -36,7 +36,12 @@ const AllBooks = () => {
                 <td>{book.author}</td>
                 <td>{book.genre}</td>
                 <td>{book.rating}</td>
-                <Link to='bookDetails' className="btn">View Details</Link>
+                <td>
+                  
+                  <Link to={`/bookDetails/${book._id}`} className="btn">
+                    View Details
+                  </Link>
+                </td>
               </tr>
             ))}
           </tbody>
