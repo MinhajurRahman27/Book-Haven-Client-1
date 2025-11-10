@@ -12,6 +12,8 @@ import MyBook from "./Components/MyBook/MyBook";
 import Login from "./Components/LoginRegister/Login";
 import Register from "./Components/LoginRegister/Register";
 import AuthProvider from "./Context/AuthProvider";
+import BookDetails from "./Components/pages/BookDetails";
+import axios from "axios";
 
 const router = createBrowserRouter([
   {
@@ -27,8 +29,12 @@ const router = createBrowserRouter([
         Component: AllBooks,
       },
       {
-        path: "addBook",
-        Component: Addbook,
+        path: "allBooks",
+        Component: AllBooks,
+      },
+      {
+        path: "bookDetails/:id",
+        Component: BookDetails,
       },
       {
         path: "myBooks",
