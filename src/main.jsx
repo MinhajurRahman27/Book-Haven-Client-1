@@ -32,11 +32,15 @@ const router = createBrowserRouter([
       },
       {
         path: "addBook",
-        Component: Addbook,
+        element: <PrivateRoute>
+          <Addbook></Addbook>
+        </PrivateRoute>,
       },
       {
         path: "myBooks",
-        Component: MyBook,
+         element:<PrivateRoute>
+         <MyBook></MyBook>
+        </PrivateRoute>
       },
       {
         path: "login",
@@ -55,7 +59,9 @@ const router = createBrowserRouter([
       },{
         path:'updateBook/:id',
         loader:({params})=>axios.get(`http://localhost:3000/userbook-details/${params.id}`),
-        Component: UpdateBook
+        element:<PrivateRoute>
+          <UpdateBook></UpdateBook>
+        </PrivateRoute>
       }
     ],
   },

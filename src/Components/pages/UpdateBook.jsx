@@ -35,7 +35,6 @@ const UpdateBook = () => {
     axios.patch(`http://localhost:3000/update-book/${id}`, updateInfo)
     .then(res =>{
       console.log(res)
-      e.target.reset()
       alert('success update')
     })
   };

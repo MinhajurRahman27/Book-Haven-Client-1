@@ -12,19 +12,26 @@ const MyBook = () => {
       .get(`http://localhost:3000/myBooks/?email=${user.email}`)
       .then((data) => {
         setBooks(data.data);
+        console.log(data.data);
       })
       .catch((err) => {
         console.log(err);
       });
   }, [user]);
 
-  const handleUpdate= ()=>{
+  console.log(myBooks);
+  const handleDelete = (id) => {
+    console.log(id);
 
-  }
+    axios.delete(`http://localhost:3000/delete-book/${id}`).then((res) => {
+      console.log(res);
+      alert("success delete");
+      const remaining = myBooks.filter((book) => book._id !== id);
 
-  const handleDelete = ()=>{
-
-  }
+      console.log(remaining);
+      setBooks(remaining);
+    });
+  };
   return (
     <div>
       <table className="table">
@@ -49,8 +56,17 @@ const MyBook = () => {
               <td>{book.genre}</td>
               <td>{book.rating}</td>
               <td>
-                <Link to={`/updateBook/${book._id}`} className="btn">Update</Link>
-                <button onClick={handleDelete} className="btn">Delete</button>
+                <Link to={`/updateBook/${book._id}`} className="btn">
+                  Update
+                </Link>
+                <button
+                  onClick={() => {
+                    handleDelete(book._id);
+                  }}
+                  className="btn"
+                >
+                  Delete
+                </button>
               </td>
             </tr>
           ))}
