@@ -21,20 +21,11 @@ const Addbook = () => {
     const genre = e.target.genre.value;
     const rating = e.target.rating.value;
     const summary = e.target.summary.value;
-    const image = e.target.image.value;
+    const coverImage = e.target.image.value;
     const userEmail = e.target.email.value;
     const userName = e.target.name.value;
 
-    console.log(
-      title,
-      author,
-      genre,
-      rating,
-      summary,
-      image,
-      userEmail,
-      userName
-    );
+   
 
     const bookInfo = {
       title,
@@ -42,7 +33,7 @@ const Addbook = () => {
       genre,
       rating,
       summary,
-      image,
+      coverImage,
       userEmail,
       userName,
     };

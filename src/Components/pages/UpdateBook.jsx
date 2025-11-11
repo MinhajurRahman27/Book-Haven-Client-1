@@ -1,12 +1,14 @@
 import React, { use } from "react";
-import { useLoaderData } from "react-router";
+import { useLoaderData, useParams } from "react-router";
 import { AuthContext } from "../../Context/AuthContext";
+import axios from "axios";
 
 const UpdateBook = () => {
+  const {id} = useParams()
   const { user } = use(AuthContext);
   const data = useLoaderData();
   const book = data.data;
-  console.log(book);
+  console.log(id);
 
   const handleUpdate = (e) => {
     e.preventDefault();
@@ -15,20 +17,27 @@ const UpdateBook = () => {
     const genre = e.target.genre.value;
     const rating = e.target.rating.value;
     const summary = e.target.summary.value;
-    const image = e.target.image.value;
+    const coverImage = e.target.image.value;
     const userEmail = e.target.email.value;
     const userName = e.target.name.value;
 
-    console.log(
+    const updateInfo = {
       title,
       author,
       genre,
       rating,
       summary,
-      image,
+      coverImage,
       userEmail,
-      userName
-    );
+      userName,
+    };
+
+    axios.patch(`http://localhost:3000/update-book/${id}`, updateInfo)
+    .then(res =>{
+      console.log(res)
+      e.target.reset()
+      alert('success update')
+    })
   };
   return (
     <div>
@@ -84,7 +93,7 @@ const UpdateBook = () => {
                 className="input w-full"
                 placeholder="coverImage"
                 name="image"
-                defaultValue={book.image}
+                defaultValue={book.coverImage}
               />
             </div>
             <div className="flex flex-col">
