@@ -2,6 +2,10 @@ import React, { use } from "react";
 import { Link, NavLink } from "react-router";
 import { AuthContext } from "../../Context/AuthContext";
 import { Tooltip } from "react-tooltip";
+import toast, { ToastBar, Toaster } from "react-hot-toast";
+// import { toast, ToastContainer } from "react-toastify";
+
+
 
 const Navbar = () => {
   const { user, signOutuser, loading } = use(AuthContext);
@@ -31,7 +35,11 @@ const Navbar = () => {
 
   const handleSignOut = () => {
     signOutuser().then(() => {
-      console.log("ber hoye gelo");
+      toast("LogOut successfull");
+    })
+    .catch(err =>{
+      console.log(err.message)
+       toast("Something went wrong!");
     });
   };
   return (
@@ -85,13 +93,17 @@ const Navbar = () => {
             <button className="btn" onClick={handleSignOut}>
               Logout
             </button>
+            
           ) : (
             <Link className="btn" to="/login">
               login/register
             </Link>
           )}
         </div>
+       {/* <ToastContainer></ToastContainer> */}
+       <Toaster></Toaster>
       </div>
+      
     </div>
   );
 };

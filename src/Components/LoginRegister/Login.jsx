@@ -1,37 +1,46 @@
-import React, { use } from "react";
+import React, { use, useEffect, useState } from "react";
 import { AuthContext } from "../../Context/AuthContext";
-import { useLocation, useNavigate } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
+import toast, { Toaster } from "react-hot-toast";
+
+
 
 const Login = () => {
   const { signInGoogle, signInwithEmail } = use(AuthContext);
-  const navigate = useNavigate()
-  const location = useLocation()
+  const [error, setError] = useState('')
+  const navigate = useNavigate();
+  const location = useLocation();
   const handleLogin = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
-  
 
     console.log(email, password);
 
     signInwithEmail(email, password)
       .then((result) => {
+       
         console.log(result.user);
-        alert("login done");
         e.target.reset();
-        navigate(location.state || '/')
-
+        navigate(location.state || "/");
       })
       .catch((err) => {
         console.log(err.message);
+        setError(err.message);
       });
   };
 
   const handleGoogle = () => {
-    signInGoogle().then((result) => {
-      console.log(result.user);
-       navigate(location.state || '/')
-    });
+    signInGoogle()
+      .then((result) => {
+        console.log(result.user);
+
+        navigate(location.state || "/");
+      })
+      .catch((err) => {
+       setError(err.message);
+        
+      });
   };
 
   return (
@@ -80,7 +89,7 @@ const Login = () => {
             Login
           </button>
         </form>
-
+        <p className="text-red-500 font-semibold text-center">{error}</p>
         <div className="flex items-center my-4">
           <hr className="flex-grow border-t border-gray-300" />
           <span className="mx-2 text-gray-500">OR</span>
@@ -93,14 +102,14 @@ const Login = () => {
         >
           Login with Google
         </button>
-
         <p className="text-center text-gray-600">
           Don't have an account?{" "}
-          <a href="/register" className="text-blue-500 hover:underline">
+          <Link to={'/register'} className="text-blue-500 hover:underline">
             Register
-          </a>
+          </Link>
         </p>
       </div>
+    <Toaster></Toaster>
     </div>
   );
 };

@@ -18,6 +18,8 @@ import PrivateRoute from "./PrivateRoute/PrivateRoute";
 import UpdateBook from "./Components/pages/UpdateBook";
 import ErrorPage from "./Components/pages/ErrorPage";
 
+
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -76,6 +78,7 @@ createRoot(document.getElementById("root")).render(
   <StrictMode>
     <AuthProvider>
       <RouterProvider router={router}></RouterProvider>
+      
     </AuthProvider>
   </StrictMode>
 );
