@@ -5,24 +5,60 @@ import Spinner from "../Spinner/Spinner";
 
 const AllBooks = () => {
   const [books, setBooks] = useState([]);
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     axios.get("http://localhost:3000/all-books").then((data) => {
       setBooks(data.data);
       console.log(data.data);
-      setLoading(false)
+      setLoading(false);
     });
   }, []);
 
-  if(loading){
-  return <Spinner></Spinner>
+  if (loading) {
+    return <Spinner></Spinner>;
   }
+
+  const handleSOrt = () => {
+    const sorted = [...books].sort(
+      (a, b) => Number(b.rating) - Number(a.rating)
+    );
+    setBooks(sorted);
+  };
+  const handleSOrtLowTohight = () => {
+    const sorted = [...books].sort(
+      (a, b) => Number(a.rating) - Number(b.rating)
+    );
+    setBooks(sorted);
+  };
 
   //name,author,genre, rating.
   return (
     <div className="px-15 ">
-      <div className=" m-6">
+      <div className=" px-5 mt-2">
+        <button
+          className="btn"
+          popoverTarget="popover-1"
+          style={{ anchorName: "--anchor-1" } /* as React.CSSProperties */}
+        >
+           Sort by Ratings
+        </button>
+
+        <ul
+          className="dropdown menu w-52 rounded-box bg-base-100 shadow-sm"
+          popover="auto"
+          id="popover-1"
+          style={{ positionAnchor: "--anchor-1" } /* as React.CSSProperties */}
+        >
+          <li>
+            <button onClick={handleSOrt}>Hight to Low</button>
+          </li>
+          <li>
+            <button onClick={handleSOrtLowTohight}>Low to High</button>
+          </li>
+        </ul>
+      </div>
+      <div className=" m-6 border">
         <table className="table">
           {/* head */}
           <thead>
@@ -45,7 +81,6 @@ const AllBooks = () => {
                 <td>{book.genre}</td>
                 <td>{book.rating}</td>
                 <td>
-                  
                   <Link to={`/bookDetails/${book._id}`} className="btn">
                     View Details
                   </Link>

@@ -62,6 +62,8 @@ const BookDetails = () => {
         console.log(err);
       });
   };
+
+  //delete funciton
   return (
     <div className="m-5">
       <div className="flex justify-center  w-[800px] mx-auto">
@@ -88,17 +90,19 @@ const BookDetails = () => {
       </div>
       <div className="">
         {
-          cmnt.map(item => <div key={item._id} className="card w-[60%] mt-4 mx-auto border-2 border-gray-500 bg-base-100 card-sm shadow-sm">
-          <div className="card-body">
-            <div className="flex items-center gap-2">
+          cmnt.map(item => <div key={item._id} className="card w-[60%] h-[100px] mt-4 mx-auto border-2 border-gray-500 bg-base-100 card-sm shadow-sm rounded-4xl">
+          <div className="card-body flex-row justify-between items-center">
+           <div>
+             <div className="flex items-center gap-2">
               <img className="w-10 h-10 border-2 border-gray-500 rounded-4xl" src={user.photoURL} alt="" />
               <p className="font-semibold text-[16px] text-gray-600">{user.displayName}</p>
             </div>
-            <p className="text-[16px] text-gray-700">
+            <p className="text-[16px] text-gray-700  px-13">
               {item.comment}
             </p>
-            <div className="justify-end card-actions">
-              <button className="btn btn-primary">delete</button>
+           </div>
+            <div className=" card-actions">
+              <button  className="btn btn-primary">delete</button>
             </div>
           </div>
         </div>)
