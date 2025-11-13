@@ -14,10 +14,10 @@ const BookCard = ({book}) => {
         />
       </figure>
       <div className="card-body ">
-        <h2 className=" font-semibold text-[18px] text-center">{title}</h2>
-        <p className="text-center font-semibold text-gray-600">Author: {author}</p>
+        <h2 className=" font-bold text-[18px] text-center">{title}</h2>
+        <p className="text-center font-semibold text-gray-600">{author}</p>
         <div className="card-actions  flex justify-center">
-          <button className="btn">Details</button>
+          <button className="btn w-[90%] hover:opacity-90 mr-2 rounded-4xl  border-0 text-white bg-indigo-600">Details</button>
         </div>
       </div>
     </div>

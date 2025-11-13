@@ -3,37 +3,37 @@ import { Link } from "react-router";
 
 const Banner = () => {
   return (
-    <div className="border text-center  px-20 py-5  flex items-center justify-between overflow-hidden mb-25">
-      <div className="space-y-5">
+    <div className="  w-11/12  h-full mx-auto flex items-center justify-between overflow-hidden mb-30 mt-15 ">
+      <div className="space-y-5  pb-5">
         <motion.h1
-          className="text-5xl "
+          className="text-[60px]  font-bold  text-sm/14"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          Welcome to Digital Library
+          A Smart Library <br /> For Smarter Readers
         </motion.h1>
         <motion.h2
-          className="text-2xl"
+          className="text-2xl text-gray-600 mb-14"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
           {" "}
-         <span className="text-orange-400">Explore</span>  _ <span className="text-sky-400">Read</span> _ <span className="text-green-900">Add</span> _ <span className="text-yellow-600">Manage</span> 
+        Step into your personal digital library where knowledge meets creativity. <br /> Discover new books, add your favorites, update old collections, and manage everything effortlessly — anytime, anywhere.
         </motion.h2>
-        <div className="flex items-center justify-center gap-5">
-          <Link to='/allBooks' className="btn">All Books</Link>
-          <Link to='/addBook' className="btn">Create Book</Link>
+        <div className=" gap-5">
+          <Link to='/allBooks' className="btn w-[200px] hover:opacity-90 mr-2 rounded-4xl  border-0 text-white bg-indigo-600">All Books</Link>
+          <Link to='/addBook' className="btn  rounded-4xl w-[200px] border-0 text-white bg-indigo-600 hover:opacity-90">Create Book</Link>
         </div>
       </div>
-      <div>
+      <div className="">
         <motion.img
-          className="w-100"
+          className="rounded-2xl  shadow-lg  shadow-indigo-500"
           initial={{ opacity: 0, y: -100 }} 
           animate={{ opacity: 1, y: 0 }} 
           transition={{ duration: 1 }}
-          src="https://i.ibb.co.com/rK1PVkPT/books-8770939-1280.jpg"
+          src="https://i.ibb.co.com/N6Jbv6fB/book-open-pages-close-up-600nw-2562942291.webp"
           alt=""
         />
       </div>

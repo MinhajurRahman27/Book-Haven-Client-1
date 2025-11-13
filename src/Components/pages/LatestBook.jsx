@@ -12,9 +12,9 @@ const LatestBook = () => {
     })
   },[])
   return (
-    <div className='mb-25'>
-      <h1 className='text-center text-3xl'>Latest Books_</h1>
-      <div className='grid grid-cols-3 p-13 border'>
+    <div className='mb-25 w-11/12 mx-auto'>
+      <h1 className='text-center text-4xl'>Latest Books_</h1>
+      <div className='grid grid-cols-3 p-13 mt-7'>
         {
           books.map(book => <BookCard key={book._id} book={book}></BookCard>)
         }
