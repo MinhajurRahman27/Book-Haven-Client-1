@@ -60,8 +60,9 @@ const MyBook = () => {
     return <Spinner></Spinner>;
   }
   return (
-    <div className=" md:w-11/12 mx-auto  mt-5 pb-40 overflow-x-auto">
-      <table className="table">
+    <div className=" md:w-11/12 mx-auto  mt-5 pb-40 ">
+      <div className="overflow-x-auto">
+        <table className="table ">
         {/* head */}
         <thead>
           <tr className="dark:text-gray-400">
@@ -92,7 +93,7 @@ const MyBook = () => {
                   onClick={() => {
                     handleDelete(book._id);
                   }}
-                  className="btn hover:opacity-90 mr-2 rounded-4xl  border-0 md:w-[140px] text-white bg-indigo-600"
+                  className="btn hover:opacity-90 mr-2 rounded-4xl  border-0 w-[140px] text-white bg-indigo-600"
                 >
                   Delete
                 </button>
@@ -101,6 +102,7 @@ const MyBook = () => {
           ))}
         </tbody>
       </table>
+      </div>
       <Toaster></Toaster>
     </div>
   );

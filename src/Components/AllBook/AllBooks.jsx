@@ -85,7 +85,7 @@ const AllBooks = () => {
                 <td>{book.genre}</td>
                 <td>{book.rating}</td>
                 <td>
-                  <Link to={`/bookDetails/${book._id}`} className="btn hover:opacity-90 mr-2 rounded-4xl  border-0 md:w-[140px] text-white bg-indigo-600">
+                  <Link to={`/bookDetails/${book._id}`} className="btn hover:opacity-90 mr-2 rounded-4xl  border-0 w-[140px] text-white bg-indigo-600">
                     View Details
                   </Link>
                 </td>
