@@ -1,7 +1,7 @@
 import React, { use, useEffect, useState } from "react";
 import { AuthContext } from "../../Context/AuthContext";
 import { Link, useLocation, useNavigate } from "react-router";
-import toast, { Toaster } from "react-hot-toast";
+
 
 
 
@@ -109,7 +109,7 @@ const Login = () => {
           </Link>
         </p>
       </div>
-    <Toaster></Toaster>
+    
     </div>
   );
 };

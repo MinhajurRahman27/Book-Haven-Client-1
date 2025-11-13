@@ -20,7 +20,7 @@ const BookDetails = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/get-comment")
+      .get("https://bookhaven-server-two.vercel.app/get-comment")
       .then((data) => {
         setCmnt(data.data);
       })
@@ -49,14 +49,14 @@ const BookDetails = () => {
     console.log(comment);
 
     axios
-      .post("http://localhost:3000/comment", reqBody)
+      .post("https://bookhaven-server-two.vercel.app/comment", reqBody)
       .then((data) => {
         console.log(data.data);
-        reqBody._id = data.data.insertedId
-        console.log(reqBody)
-        const newArr = [...cmnt, reqBody]
+        reqBody._id = data.data.insertedId;
+        console.log(reqBody);
+        const newArr = [...cmnt, reqBody];
 
-        setCmnt(newArr)
+        setCmnt(newArr);
       })
       .catch((err) => {
         console.log(err);
@@ -89,24 +89,33 @@ const BookDetails = () => {
         </div>
       </div>
       <div className="">
-        {
-          cmnt.map(item => <div key={item._id} className="card w-[60%] h-[100px] mt-4 mx-auto border-2 border-gray-500 bg-base-100 card-sm shadow-sm rounded-4xl">
-          <div className="card-body flex-row justify-between items-center">
-           <div>
-             <div className="flex items-center gap-2">
-              <img className="w-10 h-10 border-2 border-gray-500 rounded-4xl" src={user.photoURL} alt="" />
-              <p className="font-semibold text-[16px] text-gray-600">{user.displayName}</p>
-            </div>
-            <p className="text-[16px] text-gray-700  px-13">
-              {item.comment}
-            </p>
-           </div>
-            <div className=" card-actions">
-              <button  className="btn btn-primary">delete</button>
+        {cmnt.map((item) => (
+          <div
+            key={item._id}
+            className="card w-[60%] h-[100px] mt-4 mx-auto border-2 border-gray-500 bg-base-100 card-sm shadow-sm rounded-4xl"
+          >
+            <div className="card-body flex-row justify-between items-center">
+              <div>
+                <div className="flex items-center gap-2">
+                  <img
+                    className="w-10 h-10 border-2 border-gray-500 rounded-4xl"
+                    src={user.photoURL}
+                    alt=""
+                  />
+                  <p className="font-semibold text-[16px] text-gray-600">
+                    {user.displayName}
+                  </p>
+                </div>
+                <p className="text-[16px] text-gray-700  px-13">
+                  {item.comment}
+                </p>
+              </div>
+              <div className=" card-actions">
+                <button className="btn btn-primary">delete</button>
+              </div>
             </div>
           </div>
-        </div>)
-        }
+        ))}
       </div>
       <form onSubmit={handleComment}>
         <div class="w-[60%] mx-auto mt-4 mb-4 border-2 border-gray-500 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">

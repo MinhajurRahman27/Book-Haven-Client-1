@@ -1,0 +1,182 @@
+[
+  {
+    "title": "Old Man and The SEA",
+    "author": "Liam Carter",
+    "genre": "Fantasy",
+    "rating": "4.7",
+    "summary": "A young wizard embarks on a perilous journey to restore balance between magic and nature. Along the way, he discovers the truth about his lineage, faces ancient spirits, and learns that time itself holds the key to saving his world.",
+    "coverImage": "https://i.ibb.co.com/0pjZ16cX/419-R12-C0ju-L-SL500.jpg",
+    "userEmail": "liam@example.com"
+  },
+  {
+    "title": "WILLIAM GOLDING",
+    "author": "Amelia Frost",
+    "genre": "Mystery",
+    "rating": "4.3",
+    "summary": "Detective Amelia Frost stumbles upon a web of lies buried beneath decades of silence. As she follows the trail of clues, she uncovers a dark conspiracy that connects a long-forgotten crime to powerful people still walking free.",
+    "coverImage": "https://i.ibb.co.com/3mp6PXKL/14428.jpg",
+    "userEmail": "amelia@example.com"
+  },
+  {
+    "title": "TO KILL A Mocakigh",
+    "author": "Noah Bennett",
+    "genre": "Adventure",
+    "rating": "4.6",
+    "summary": "A sailor haunted by his past sets sail to uncover a lost island spoken of only in legends. Battling fierce storms and inner demons, he finds a truth that challenges everything he believed about the sea and himself.",
+    "coverImage": "https://i.ibb.co.com/0ywK9cdd/pf-157924db-Books11-1200x.webp",
+    "userEmail": "noah@example.com"
+  },
+  {
+    "title": "Abu Bakar As Siddik",
+    "author": "Daniel Frost",
+    "genre": "Fantasy",
+    "rating": "4.7",
+    "summary": "A once-prosperous kingdom faces ruin when the eternal winter returns. A reluctant prince must rise against destiny to awaken the ancient fire that can melt the frozen curse.",
+    "coverImage": "https://i.ibb.co.com/SwWrcB3N/399-1.jpg",
+    "userEmail": "daniel@example.com"
+  },
+  {
+    "title": "The Sealed Nectar",
+    "author": "Ella Brooks",
+    "genre": "Mystery",
+    "rating": "4.3",
+    "summary": "When Ella inherits an abandoned lighthouse, she discovers an old diary filled with cryptic notes and drawings. As she decodes the entries, she unravels a century-old mystery of love, loss, and betrayal.",
+    "coverImage": "https://i.ibb.co.com/CppsFgkr/51e-CU1i-K7f-L-SL500.jpg",
+    "userEmail": "ella@example.com"
+  },
+  {
+    "title": "Islamic History",
+    "author": "Benjamin Cole",
+    "genre": "Romance",
+    "rating": "4.5",
+    "summary": "A world-famous chef returns home to open a small seaside café. Amidst recipes, laughter, and nostalgia, he rediscovers the flavors of love he thought he had lost forever.",
+    "coverImage": "https://i.ibb.co.com/svmgyJfH/LIH-Cover.png",
+    "userEmail": "benjamin@example.com"
+  },
+  {
+    "title": "World Watch",
+    "author": "Mia Rogers",
+    "genre": "Adventure",
+    "rating": "4.2",
+    "summary": "A lost explorer, guided only by a broken compass, embarks on a perilous expedition through uncharted lands. What he finds challenges his beliefs about courage, destiny, and the true meaning of home.",
+    "coverImage": "https://i.ibb.co.com/Nnn0gTcR/world-watch-history-3.webp",
+    "userEmail": "mia@example.com"
+  },
+  {
+    "title": "The Painter’s Secret",
+    "author": "Henry Wallace",
+    "genre": "Art Fiction",
+    "rating": "4.6",
+    "summary": "An art student discovers an unsigned painting hidden in her professor’s studio. As she searches for its origin, she unravels a haunting tale of love, obsession, and sacrifice that transcends generations.",
+    "coverImage": "https://i.ibb.co.com/JTzVdTh/ancient-indian-history-1.jpg",
+    "userEmail": "henry@example.com"
+  },
+  {
+    "title": "Under the Crimson Sky",
+    "author": "Natalie Stone",
+    "genre": "Historical Fiction",
+    "rating": "4.8",
+    "summary": "Set during a time of war and revolution, two lovers are torn apart by fate and politics. Their letters to each other become a testament to the enduring power of love against all odds.",
+    "coverImage": "https://i.ibb.co.com/zTVNNsSX/world-war-2-1024x1024-1.webp",
+    "userEmail": "natalie@example.com"
+  },
+  {
+    "title": "Code of Shadows",
+    "author": "Lucas Park",
+    "genre": "Thriller",
+    "rating": "4.9",
+    "summary": "A former intelligence agent discovers a hidden program that erases people from history. To uncover the truth, he must confront the very agency he once served — and the lies that define his past.",
+    "coverImage": "https://i.ibb.co.com/zTVNNsSX/world-war-2-1024x1024-1.webp",
+    "userEmail": "lucas@example.com"
+  },
+  {
+    "title": "Whispers in the Library",
+    "author": "Ava Green",
+    "genre": "Mystery",
+    "rating": "4.4",
+    "summary": "While cataloging rare manuscripts, a librarian discovers a coded message hidden in the margins. Her search for its meaning reveals a secret society guarding knowledge forbidden to mankind.",
+    "coverImage": "https://i.ibb.co.com/7xTM3TxY/0937694-my-brief-history-paperback-bangladeshi-print.jpg",
+    "userEmail": "ava@example.com"
+  },
+  {
+    "title": "The Money Book",
+    "author": "Evelyn Hart",
+    "genre": "Romance",
+    "rating": "4.3",
+    "summary": "Two souls meet under the silver glow of the full moon and are bound by destiny. As the world tests their love, they discover that promises made beneath the moonlight are never easily broken.",
+    "coverImage": "https://i.ibb.co.com/Q3fKDGJ9/3-D-cover-The-Money-Book-Kiernan-D-Agnese.webp",
+    "userEmail": "evelyn@example.com"
+  },
+  {
+    "title": "The Psychology Of Money",
+    "author": "Aaron Blake",
+    "genre": "Sci-Fi",
+    "rating": "4.7",
+    "summary": "In a world ruled by artificial intelligence, one human dares to fight back. As machines evolve beyond control, he uncovers the truth about their creation — and the terrifying reason they turned on humanity.",
+    "coverImage": "https://i.ibb.co.com/gLVPT6G1/811e6-Muo-Oo-L.jpg",
+    "userEmail": "aaron@example.com"
+  },
+    {
+    "title": "Islamic Psychology Around The Globe",
+    "author": "Grace Hollow",
+    "genre": "Romance",
+    "rating": "4.2",
+    "summary": "In a quiet countryside garden, two lonely souls cross paths. What begins as casual encounters among blooming roses slowly turns into a deep connection that heals old wounds and rekindles the forgotten magic of love.",
+    "coverImage": "https://i.ibb.co.com/81gsMkG/e7e9ddab496d0733a7b6018cf6bc0a4dfa36e6e7-1181x1181-900x900.webp",
+    "userEmail": "grace@example.com"
+  },
+  {
+    "title": "Islamic Psychology",
+    "author": "Ethan Cross",
+    "genre": "Thriller",
+    "rating": "4.8",
+    "summary": "When a journalist begins investigating a decades-old murder, he is drawn into a world of deceit and betrayal. Every clue he uncovers brings him closer to a truth that someone will kill to keep buried forever.",
+    "coverImage": "https://i.ibb.co.com/8gpcyCpn/e438749cf6218d84f7b68a667d9f8d3098a960b4-1200x1200.webp",
+    "userEmail": "ethan@example.com"
+  },
+  {
+    "title": "Umar Ibn Al-Khattab",
+    "author": "Isabella Lane",
+    "genre": "Sci-Fi",
+    "rating": "4.5",
+    "summary": "Commander Elara ventures beyond the known galaxies in search of new life. But when her ship intercepts a mysterious signal, she discovers that the message is from humanity’s distant future — and it carries a dire warning.",
+    "coverImage": "https://i.ibb.co.com/TMcZ0bW1/images-1.jpg",
+    "userEmail": "isabella@example.com"
+  },
+  {
+    "title": "Umar Ibn Al-Khattab",
+    "author": "Oliver Reed",
+    "genre": "Drama",
+    "rating": "4.1",
+    "summary": "A gifted composer, after losing his hearing in a tragic accident, struggles to find inspiration again. Through the friendship of a young violinist, he learns that true music isn’t heard with ears — it’s felt with the heart.",
+    "coverImage": "https://i.ibb.co.com/N2NNk8V4/18266900.jpg",
+    "userEmail": "oliver@example.com"
+  },
+  {
+    "title": "The Seerah Of The Greatest",
+    "author": "Charlotte Dean",
+    "genre": "History",
+    "rating": "4.6",
+    "summary": "An ambitious archaeologist unearths the ruins of a kingdom erased from history. As she pieces together its secrets, she realizes that the empire’s fall may be tied to her own family’s mysterious past.",
+    "coverImage": "https://i.ibb.co.com/v4QhYc8N/images.jpg",
+    "userEmail": "charlotte@example.com"
+  },
+  {
+    "title": "The Seerah Of last Prophet",
+    "author": "Jack Collins",
+    "genre": "Motivational",
+    "rating": "4.4",
+    "summary": "After losing everything in a devastating fire, a young man rebuilds his life from the ashes. His journey of self-discovery inspires others to believe that even in the darkest times, hope burns brighter than fear.",
+    "coverImage": "https://i.ibb.co.com/kV18hpSp/75675524.jpg",
+    "userEmail": "jack@example.com"
+  },
+  {
+    "title": "The Life Of Prophet",
+    "author": "Sophia Hale",
+    "genre": "Tech Thriller",
+    "rating": "4.9",
+    "summary": "When a hacker deciphers a code that grants control over global systems, she must decide whether to destroy it or use it to expose corruption. But powerful enemies will do anything to keep her silent.",
+    "coverImage": "https://i.ibb.co.com/3mqDDn8F/56330506.jpg",
+    "userEmail": "sophia@example.com"
+  }
+]

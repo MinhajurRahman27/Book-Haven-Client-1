@@ -12,12 +12,15 @@ const MyBook = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/myBooks/?email=${user.email}`, {
-        headers: {
-          authorization: `Bearer ${user.accessToken}`,
-          "Content-Type": "application/json",
-        },
-      })
+      .get(
+        `https://bookhaven-server-two.vercel.app/myBooks/?email=${user.email}`,
+        {
+          headers: {
+            authorization: `Bearer ${user.accessToken}`,
+            "Content-Type": "application/json",
+          },
+        }
+      )
       .then((data) => {
         setBooks(data.data);
         console.log(data.data);
@@ -32,27 +35,29 @@ const MyBook = () => {
   const handleDelete = (id) => {
     console.log(id);
 
-    axios.delete(`http://localhost:3000/delete-book/${id}`, {
+    axios
+      .delete(`https://bookhaven-server-two.vercel.app/delete-book/${id}`, {
         headers: {
           authorization: `Bearer ${user.accessToken}`,
           "Content-Type": "application/json",
         },
-      }).then((res) => {
-      console.log(res);
-      toast.success("deleted successfully");
-      const remaining = myBooks.filter((book) => book._id !== id);
+      })
+      .then((res) => {
+        console.log(res);
+        toast.success("deleted successfully");
+        const remaining = myBooks.filter((book) => book._id !== id);
 
-      console.log(remaining);
-      setBooks(remaining);
-    })
-    .catch(err =>{
-      console.log(err.message)
-      toast.error('Something Went Wrong!');
-    })
+        console.log(remaining);
+        setBooks(remaining);
+      })
+      .catch((err) => {
+        console.log(err.message);
+        toast.error("Something Went Wrong!");
+      });
   };
 
   if (loading) {
-    return <Spinner></Spinner>
+    return <Spinner></Spinner>;
   }
   return (
     <div className="card shadow-2xl w-[700px] mx-auto mt-5">

@@ -17,7 +17,7 @@ import BookDetails from "./Components/pages/BookDetails";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
 import UpdateBook from "./Components/pages/UpdateBook";
 import ErrorPage from "./Components/pages/ErrorPage";
-import { ThemeProvider } from 'next-themes'
+import { ThemeProvider } from "next-themes";
 
 const router = createBrowserRouter([
   {
@@ -59,7 +59,9 @@ const router = createBrowserRouter([
       {
         path: "bookDetails/:id",
         loader: ({ params }) =>
-          axios.get(`http://localhost:3000/book-details/${params.id}`),
+          axios.get(
+            `https://bookhaven-server-two.vercel.app/book-details/${params.id}`
+          ),
         element: (
           <PrivateRoute>
             <BookDetails></BookDetails>
@@ -69,7 +71,9 @@ const router = createBrowserRouter([
       {
         path: "updateBook/:id",
         loader: ({ params }) =>
-          axios.get(`http://localhost:3000/userbook-details/${params.id}`),
+          axios.get(
+            `https://bookhaven-server-two.vercel.app/userbook-details/${params.id}`
+          ),
         element: (
           <PrivateRoute>
             <UpdateBook></UpdateBook>
@@ -86,12 +90,10 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    
-      <AuthProvider>
-       <ThemeProvider attribute='class' defaultTheme="light">
-         <RouterProvider router={router}></RouterProvider>
-       </ThemeProvider>
-      </AuthProvider>
-    
+    <AuthProvider>
+      <ThemeProvider attribute="class" defaultTheme="light">
+        <RouterProvider router={router}></RouterProvider>
+      </ThemeProvider>
+    </AuthProvider>
   </StrictMode>
 );

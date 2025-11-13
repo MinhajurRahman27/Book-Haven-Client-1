@@ -35,12 +35,16 @@ const UpdateBook = () => {
 
     //https://bookhaven-server-two.vercel.app
     axios
-      .patch(`http://localhost:3000/update-book/${id}`, updateInfo, {
-        headers: {
-          authorization: `Bearer ${user.accessToken}`,
-          "Content-Type": "application/json",
-        },
-      })
+      .patch(
+        `https://bookhaven-server-two.vercel.app/update-book/${id}`,
+        updateInfo,
+        {
+          headers: {
+            authorization: `Bearer ${user.accessToken}`,
+            "Content-Type": "application/json",
+          },
+        }
+      )
       .then((res) => {
         console.log(res);
         toast.success("Updated succefully");

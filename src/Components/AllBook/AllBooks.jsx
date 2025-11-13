@@ -8,11 +8,13 @@ const AllBooks = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get("http://localhost:3000/all-books").then((data) => {
-      setBooks(data.data);
-      console.log(data.data);
-      setLoading(false);
-    });
+    axios
+      .get("https://bookhaven-server-two.vercel.app/all-books")
+      .then((data) => {
+        setBooks(data.data);
+        console.log(data.data);
+        setLoading(false);
+      });
   }, []);
 
   if (loading) {
@@ -41,7 +43,7 @@ const AllBooks = () => {
           popoverTarget="popover-1"
           style={{ anchorName: "--anchor-1" } /* as React.CSSProperties */}
         >
-           Sort by Ratings
+          Sort by Ratings
         </button>
 
         <ul
