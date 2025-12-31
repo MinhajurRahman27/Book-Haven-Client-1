@@ -44,12 +44,5 @@ This frontend project uses:
 
 ---
 
-## 🛠️ Installation (Local Development)
 
-If you want to run the project locally:
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/MinhajurRahman27/Book-Haven-Client-1.git
-   cd Book-Haven-Client-1
 
