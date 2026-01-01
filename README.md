@@ -6,6 +6,12 @@ Welcome to **Book Haven** — a modern, responsive web client for browsing and m
 🔗 **Live Demo:** https://smart-deals-shishirtry.web.app/
 
 ---
+## 🖼️ Screenshot
+
+![A‑Store Screenshot](https://i.ibb.co.com/TqPMxFHP/Screenshot-11.png)  
+*Clean and modern UI showcasing the main page of the application.*
+
+---
 
 ## 🚀 About
 
